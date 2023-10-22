@@ -3,9 +3,9 @@ provider "aws" {
 }
 
 module "vpc" {
-  source = "terraform-aws-modules/vpc/aws"
+  source  = "terraform-aws-modules/vpc/aws"
+  version = "5.1.2"
 
-  version                 = "5.1.2"
   azs                     = ["us-west-1a", "us-west-1b"] # The control plane needs at least two.
   cidr                    = "10.0.0.0/16"
   private_subnets         = ["10.0.0.0/24", "10.0.1.0/24"] # See azs.
@@ -14,10 +14,10 @@ module "vpc" {
 }
 
 module "eks" {
-  source = "terraform-aws-modules/eks/aws"
+  source  = "terraform-aws-modules/eks/aws"
+  version = "19.17.2"
 
   cluster_name                   = "eks-example"
-  version                        = "19.17.2"
   vpc_id                         = module.vpc.vpc_id
   control_plane_subnet_ids       = module.vpc.private_subnets
   subnet_ids                     = module.vpc.public_subnets
