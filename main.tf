@@ -1,6 +1,5 @@
-provider "aws" {}
-
 data "aws_caller_identity" "current" {}
+
 data "aws_availability_zones" "available" { state = "available" }
 
 resource "aws_iam_role" "ebs_csi_iam_role" {
