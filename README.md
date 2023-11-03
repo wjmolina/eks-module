@@ -8,4 +8,6 @@ This Terraform module creates an EKS cluster and a VPC using AWS modules. The VP
 
 # Issues
 
-The `aws_eks_addon` warning is being tracked in the following issue: https://github.com/terraform-aws-modules/terraform-aws-eks/issues/2635
+The `aws_eks_addon` warning is being tracked in the following issue:
+
+- https://github.com/terraform-aws-modules/terraform-aws-eks/issues/2635
