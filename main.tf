@@ -29,11 +29,11 @@ module "eks" {
   source  = "terraform-aws-modules/eks/aws"
   version = "19.21.0"
 
-  cluster_endpoint_public_access          = true
-  cluster_name                            = var.cluster_name
-  cluster_security_group_additional_rules = var.cluster_security_group_additional_rules
-  eks_managed_node_groups                 = var.eks_managed_node_groups
-  control_plane_subnet_ids                = module.vpc.private_subnets
-  subnet_ids                              = module.vpc.public_subnets
-  vpc_id                                  = module.vpc.vpc_id
+  cluster_endpoint_public_access       = true
+  cluster_name                         = var.cluster_name
+  node_security_group_additional_rules = var.node_security_group_additional_rules
+  eks_managed_node_groups              = var.eks_managed_node_groups
+  control_plane_subnet_ids             = module.vpc.private_subnets
+  subnet_ids                           = module.vpc.public_subnets
+  vpc_id                               = module.vpc.vpc_id
 }

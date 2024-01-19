@@ -32,7 +32,7 @@ variable "eks_managed_node_groups" {
   default = { default = {} }
 }
 
-variable "cluster_security_group_additional_rules" {
+variable "node_security_group_additional_rules" {
   type    = map(any)
   default = {}
 }
