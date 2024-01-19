@@ -17,12 +17,13 @@ module "vpc" {
   source  = "terraform-aws-modules/vpc/aws"
   version = "5.5.1"
 
-  name                    = var.vpc_name
-  azs                     = var.availability_zones
-  cidr                    = var.cidr
-  private_subnets         = var.private_subnets
-  public_subnets          = var.public_subnets
-  map_public_ip_on_launch = true
+  name                           = var.vpc_name
+  azs                            = var.availability_zones
+  cidr                           = var.cidr
+  private_subnets                = var.private_subnets
+  public_subnets                 = var.public_subnets
+  default_security_group_ingress = var.default_security_group_ingress
+  map_public_ip_on_launch        = true
 }
 
 module "eks" {

@@ -31,3 +31,8 @@ variable "eks_managed_node_groups" {
   type    = map(any)
   default = { default = {} }
 }
+
+variable "default_security_group_ingress" {
+  type    = list(object)
+  default = []
+}
