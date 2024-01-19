@@ -34,5 +34,5 @@ variable "eks_managed_node_groups" {
 
 variable "cluster_security_group_additional_rules" {
   type    = map(any)
-  default = []
+  default = {}
 }
