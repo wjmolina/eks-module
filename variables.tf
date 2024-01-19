@@ -33,6 +33,6 @@ variable "eks_managed_node_groups" {
 }
 
 variable "default_security_group_ingress" {
-  type    = list(object)
+  type    = list(any)
   default = []
 }
