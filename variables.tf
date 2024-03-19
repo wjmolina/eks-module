@@ -28,11 +28,16 @@ variable "public_subnets" {
 }
 
 variable "eks_managed_node_groups" {
-  type    = map(any)
+  type    = any
   default = { default = {} }
 }
 
 variable "node_security_group_additional_rules" {
-  type    = map(any)
+  type    = any
+  default = {}
+}
+
+variable "cluster_addons" {
+  type    = any
   default = {}
 }
